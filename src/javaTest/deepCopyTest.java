@@ -2,6 +2,8 @@ package javaTest;
 
 import utils.CommonUtils;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,14 +13,32 @@ public class deepCopyTest {
         List<Integer> list= Arrays.asList(new Integer[]{1,2,3,4,5});
         List<Integer> shallowList=list;
         List<Integer> deepList= CommonUtils.deepCopy(Integer.class,list);
+        List<Integer> testList= setTest(list);
+        List<Integer> testAddAllList= new ArrayList<>();
+        testAddAllList.addAll(list);
 
         shallowList.set(0,shallowList.get(4));
         System.out.println(list);
         System.out.println(shallowList);
         System.out.println(deepList);
 
-        deepList.set(1,99);
+        list.set(1,99);
         System.out.println(list);
-        System.out.println(deepList);
+        System.out.println(deepList);//Collections.copy 方法 出来的链表 是深度的
+        System.out.println(testList);//遍历+set方法 出来的链表 是深度的
+        System.out.println(testAddAllList);//addAll出来的链表 是深度的
+
+    }
+
+    private static List<Integer> setTest(List<Integer> list){
+        List<Integer> testList=new ArrayList<>();
+        Integer[] array = (Integer []) Array.newInstance(Integer.class,list.size());
+        testList.addAll(Arrays.asList(array));
+
+        for (int i=0;i<list.size();i++){
+            testList.set(i,list.get(i));
+        }
+        return testList;
+
     }
 }

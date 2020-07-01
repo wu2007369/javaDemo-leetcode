@@ -11,6 +11,9 @@ public class dairyTest {
             System.out.println(s.toUpperCase());
             System.out.println(s);
             System.out.println(sum(10));
+            System.out.println(s.charAt(0));
+            System.out.println(s.charAt(1));
+            System.out.println("".charAt(0));
         }
 
     static int sum(int n){
