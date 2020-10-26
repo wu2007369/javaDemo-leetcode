@@ -19,5 +19,8 @@ public class ArrayListTest {
         list2.add(0,99);
         System.out.println(list);
         System.out.println(list2);
+
+        System.out.println(list2.subList(0,2));
+        System.out.println(list2);
     }
 }
