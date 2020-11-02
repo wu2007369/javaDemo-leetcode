@@ -1,5 +1,6 @@
 package javaTest;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,6 +17,21 @@ public class DateTest {
             e.printStackTrace();
         }
         System.out.println(content);
+
+
+        Date mDate = new Date();
+        System.out.println(mDate.toString());
+        System.out.println(mDate.getTime());
+
+        Date mDate2=new Date(826300800000L);
+        System.out.println(mDate2.toString());
+        System.out.println(mDate2.getTime());
+
+        Date mDate3 = new Date(0);
+        System.out.println(mDate3.toString());
+        System.out.println(mDate3.getTime());
+
+
     }
 
     /**
