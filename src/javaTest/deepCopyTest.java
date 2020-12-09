@@ -16,6 +16,9 @@ public class deepCopyTest {
         List<Integer> testList= setTest(list);
         List<Integer> testAddAllList= new ArrayList<>();
         testAddAllList.addAll(list);
+        //TODO Attetion ：这是不被允许操作的.Array转型承德list是有长度限制的
+//        list.addAll(list);
+//        list.add(0);
 
         shallowList.set(0,shallowList.get(4));
         System.out.println(list);
