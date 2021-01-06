@@ -1,7 +1,7 @@
 package javaTest.interfa;
 
 public interface TestInterface {
-    public String name="csdcsdcsd";
+    String name="csdcsdcsd";
 
     void run();
 }

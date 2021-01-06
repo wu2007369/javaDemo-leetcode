@@ -11,6 +11,9 @@ public class InterfaceTest {
                 System.out.println("xcko;lxkop;aklx");
                 System.out.println(this.name);
 
+                //果然是默认的public static类型
+                System.out.println(TestInterface.name);
+
             }
         };
         in.run();
