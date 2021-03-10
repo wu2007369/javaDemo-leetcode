@@ -31,4 +31,25 @@ public class BigDecimalTest {
         }
         return s;
     }
+
+
+/*    //加法
+    BigDecimal result1 = num1.add(num2);
+    BigDecimal result12 = num12.add(num22);
+
+    //减法
+    BigDecimal result2 = num1.subtract(num2);
+    BigDecimal result22 = num12.subtract(num22);
+
+    //乘法
+    BigDecimal result3 = num1.multiply(num2);
+    BigDecimal result32 = num12.multiply(num22);
+
+    //绝对值
+    BigDecimal result4 = num3.abs();
+    BigDecimal result42 = num32.abs();
+
+    //除法
+    BigDecimal result5 = num2.divide(num1,20,BigDecimal.ROUND_HALF_UP);
+    BigDecimal result52 = num22.divide(num12,20,BigDecimal.ROUND_HALF_UP);*/
 }
