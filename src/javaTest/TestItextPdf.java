@@ -22,7 +22,7 @@ public class TestItextPdf {
     public static void main(String[] args)  /*throws FileNotFoundException, DocumentException*/
     {
 
-        splitPdf("/Users/wuzhiming/Downloads/刘云生.pdf");
+        splitPdf("/Users/wuzhiming/Downloads/刘云生.pdf",4);
 //        createPdf();
     }
 
@@ -54,11 +54,12 @@ public class TestItextPdf {
 
 
     /**
-     * 将filename文件切分成多个4页大小的文件
-     * @param filename
-     * @return 将filename文件划分成的子文件数目
+     * 将filename文件切分成多个自定义页数大小的文件
+     * @param filename 文件路径
+     * @param splitSize  切分后的小文件的页数
+     * @return 将filename文件划分成的子文件数目 >0则是成功
      */
-    public static int splitPdf(String filename) {
+    public static int splitPdf(String filename,int splitSize) {
         // String filename = "1904.08394.pdf";
         PdfReader reader = null;
         try {
@@ -67,7 +68,6 @@ public class TestItextPdf {
             return -1;
         }
         int numberOfPages = reader.getNumberOfPages();
-        int splitSize = 4;
         int numberOfNewFiles = 0, pageNumber = 1;
         while (pageNumber <= numberOfPages) {
             Document doc = new Document();
