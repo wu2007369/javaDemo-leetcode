@@ -16,6 +16,15 @@ fun main(args:Array<String>) {
     cal.set(Calendar.MONTH, Calendar.APRIL)
     showCalender(cal)
     println(getAllDay(7))
+
+
+    val format2= SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    val cal2 = Calendar.getInstance()
+    println(format2.format(cal2.time))
+    cal2.set(Calendar.HOUR_OF_DAY,7)
+    println(format2.format(cal2.time))
+    cal2.set(Calendar.HOUR_OF_DAY,14)
+    println(format2.format(cal2.time))
 }
 
 fun  getAllDay(month:Int):List<String> {
