@@ -16,6 +16,22 @@ public class BigDecimalTest {
         System.out.println(subZeroAndDot(""+(Float.valueOf("100")-Float.valueOf("1"))));
         System.out.println(subZeroAndDot(decimal.subtract(decimal2).setScale(2).toString()));
         System.out.println(subZeroAndDot(decimal.subtract(decimal2).setScale(2,BigDecimal.ROUND_UNNECESSARY).toString()));
+
+        System.out.println(decimal.subtract(decimal2).setScale(2).toString());
+        System.out.println(decimal.subtract(decimal2).setScale(1).toString());
+//        System.out.println(decimal.subtract(decimal2).setScale(0).toString());
+//        System.out.println(decimal.subtract(decimal2).setScale(0,BigDecimal.ROUND_UNNECESSARY).toString());
+
+        System.out.println(new BigDecimal("1225.12").setScale(2));
+        System.out.println(new BigDecimal("1225.1").setScale(2));
+        System.out.println(new BigDecimal("1225").setScale(2));
+
+        System.out.println(new BigDecimal("1225.120").setScale(2));//不会出错
+//        System.out.println(new BigDecimal("1225.120").setScale(1));//出错原因精度丢失问题，要指定舍入模式即可
+//        System.out.println(new BigDecimal("1225.121").setScale(2));//出错原因精度丢失问题，要指定舍入模式即可
+
+        System.out.println(new BigDecimal("1225.120").setScale(1,BigDecimal.ROUND_HALF_UP));
+        System.out.println(new BigDecimal("1225.121").setScale(2,BigDecimal.ROUND_HALF_UP));
     }
 
     /**

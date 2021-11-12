@@ -20,10 +20,13 @@ fun main(args:Array<String>) {
 
     val format2= SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     val cal2 = Calendar.getInstance()
-    println(format2.format(cal2.time))
+    val date1=cal2.time
+    println(format2.format(date1))
     cal2.set(Calendar.HOUR_OF_DAY,7)
-    println(format2.format(cal2.time))
+    val date2=cal2.time
+    println(format2.format(date2))
     cal2.set(Calendar.HOUR_OF_DAY,14)
+    println(date1<date2)
     println(format2.format(cal2.time))
 }
 
