@@ -7,6 +7,10 @@ class SetGetTest {
         field = value+99
         println("realvalue="+(value+99))
     }
+
+    init {
+        num=999
+    }
 }
 
 fun main(args:Array<String>) {
