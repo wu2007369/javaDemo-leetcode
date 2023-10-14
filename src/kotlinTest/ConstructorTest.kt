@@ -1,0 +1,4 @@
+package kotlinTest
+
+class ConstructorTest {
+}

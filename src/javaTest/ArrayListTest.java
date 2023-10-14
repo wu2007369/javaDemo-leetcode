@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayListTest {
+    String content=null;
     public static void main(String []args){
         ArrayList<Integer> list=new ArrayList<>(Arrays.asList(new Integer[]{
                 1,2,3,4,5

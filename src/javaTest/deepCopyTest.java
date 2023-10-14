@@ -27,9 +27,12 @@ public class deepCopyTest {
 
         list.set(1,99);
         System.out.println(list);
-        System.out.println(deepList);//Collections.copy 方法 出来的链表 是深度的
-        System.out.println(testList);//遍历+set方法 出来的链表 是深度的
-        System.out.println(testAddAllList);//addAll出来的链表 是深度的
+        System.out.println(shallowList);
+        System.out.println(deepList);//Collections.copy 方法 是新链表对象，但是元素还是相同引用，即相同对象
+        System.out.println(testList);//遍历+set方法 出来的链表 是新链表对象，但是元素还是相同引用，即相同对象
+        System.out.println(testAddAllList);//addAll出来的链表 是新链表对象，但是元素还是相同引用，即相同对象
+        //法4 json序列化以及反序列化，既是新链表对象，内部元素也都是新的对象，而不是统一引用
+
 
     }
 
