@@ -16,6 +16,7 @@ public class InterfaceTest {
 
             }
         };
+        //接口可以用匿名内部类实现。那么kotlin的obect:方式也是可以实现的了。
         in.run();
     }
 }
